@@ -49,6 +49,7 @@ func checkGofmtStyling(path string) error {
 		return fmt.Errorf("Невозможно получить результат выполнения команды: %s. Ошибка: %w", cmd, err)
 	}
 	if len(out) > 0 {
+		fmt.Println("Here out checkGofmtStyling")
 		fmt.Println(string(out))
 		return fmt.Errorf("Найдены неотформатированные файлы:\n\n%s", cmd)
 	}
@@ -67,6 +68,7 @@ func checkGoimportsStyling(path string) error {
 		return fmt.Errorf("Невозможно получить результат выполнения команды: %s. Ошибка: %w", cmd, err)
 	}
 	if len(out) > 0 {
+		fmt.Println("Here out checkGoimportsStyling")
 		fmt.Println(string(out))
 		return fmt.Errorf("Найдены неотформатированные файлы:\n\n%s", cmd)
 	}
